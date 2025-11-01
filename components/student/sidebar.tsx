@@ -3,13 +3,36 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { Home, Search, FileText, User, Heart, Settings, BookOpen, Upload } from 'lucide-react'
+import { 
+  Home, 
+  Search, 
+  FileText, 
+  User, 
+  Heart, 
+  Settings, 
+  BookOpen, 
+  Upload,
+  CheckSquare,
+  Award,
+  GraduationCap,
+  CreditCard,
+  Users,
+  PenTool,
+  Globe
+} from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const menuItems = [
   { icon: Home, label: 'Dashboard', href: '/dashboard' },
-  { icon: Search, label: 'Search Programs', href: '/search' },
+  { icon: Search, label: 'Programs & Schools', href: '/programs' },
   { icon: FileText, label: 'My Applications', href: '/applications' },
+  { icon: CheckSquare, label: 'My Tasks', href: '/tasks' },
+  { icon: Award, label: 'Offers', href: '/offers' },
+  { icon: Globe, label: '360 Solutions', href: '/solutions' },
+  { icon: Users, label: 'Students', href: '/students' },
+  { icon: CreditCard, label: 'Payments', href: '/payments' },
+  { icon: PenTool, label: 'SOP Generator', href: '/sop-generator' },
+  { icon: GraduationCap, label: 'TrainHub', href: '/trainhub' },
   { icon: User, label: 'Profile', href: '/profile' },
   { icon: Upload, label: 'Documents', href: '/documents' },
   { icon: Heart, label: 'Favorites', href: '/favorites' },
@@ -25,11 +48,11 @@ export function Sidebar() {
       <div className="p-6 border-b">
         <Link href="/dashboard" className="flex items-center space-x-2">
           <Image
-            src="/images/logo.png"
-            alt="UniPass"
-            width={120}
-            height={32}
-            className="h-8 w-auto"
+            src="/uni-pass-logo.png"
+            alt="Uni Pass International"
+            width={140}
+            height={36}
+            className="h-9 w-auto"
           />
         </Link>
       </div>
